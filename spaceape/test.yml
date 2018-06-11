@@ -1,0 +1,20 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+
+  requestLog:
+    appenders:
+      - type: file
+        currentLogFilename: testing_access.log
+        archive: false
+
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: testing_application.log
+      archive: false
+      threshold: ALL
+      timeZone: UTC
+      logFormat: "%d{yyyy-MM-dd HH:mm:ss.SSS,UTC} %-3level %logger{26}: %msg %ex{full}%n"

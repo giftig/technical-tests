@@ -1,0 +1,22 @@
+server:
+  requestLog:
+    appenders:
+      - type: file
+        currentLogFilename: access.log
+        archive: false
+
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: application.log
+      archive: false
+      threshold: ALL
+      timeZone: UTC
+      logFormat: "%d{yyyy-MM-dd HH:mm:ss.SSS,UTC} %-3level %logger{26}: %msg %ex{full}%n"
+
+database:
+  hostname: localhost
+  port: 5984
+
+endpointTimeout: 0

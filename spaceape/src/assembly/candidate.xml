@@ -1,0 +1,26 @@
+<assembly>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <fileSets>
+        <fileSet>
+            <includes>
+                <include>README.md</include>
+                <include>pom.xml</include>
+                <include>test.yml</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/scala</directory>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>src/test/scala</directory>
+            <includes>
+                <include>com/spaceape/hiring/NoughtsTest.scala</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

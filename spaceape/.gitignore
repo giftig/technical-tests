@@ -1,0 +1,6 @@
+/target
+*.class
+*.swp
+*.swo
+
+*.log
